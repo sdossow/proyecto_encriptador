@@ -1,52 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de Texto</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        button {
+            margin: 5px;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.8em;
+        }
+    </style>
+</head> 
 <body>
-    <div class="container">
-        <h1>Encriptador de Texto</h1>
-        <textarea id="inputText" placeholder="Ingresa tu texto aquí"></textarea>
-        <div class="buttons">
-            <button onclick="encriptarTexto()">Encriptar</button>
-            <button onclick="desencriptarTexto()">Desencriptar</button>
-        </div>
-        <div id="output" class="output"></div>
-    </div>
+    <header>
+        <img src="/imagenes/Logo.png" alt="logo de alura" class="logo">
+    </header>
 
-    <script>
-        function encriptar(texto) {
-            return texto
-                .replace(/e/g, 'enter')
-                .replace(/i/g, 'imes')
-                .replace(/a/g, 'ai')
-                .replace(/o/g, 'ober')
-                .replace(/u/g, 'ufat');
-        }
+    <main> 
+            <section>
+     
+             <h1>Encriptador de Texto</h1>
+             <textarea class="text-area" id="inputText" placeholder="Introduce tu texto aquí..."></textarea>
+                <div>
+                    <h6 class="informacion"> solo letras minusculas y sin acento.</h6>
+                </div>
+             <div class="botones">
+                <button class="boton_encriptar" onclick="encriptar()">Cifrar</button>
+                <button class="boton_desencriptar" onclick="descifrar()">Descifrar</button>
+            </div>
+             </section>
 
-        function desencriptar(texto) {
-            return texto
-                .replace(/enter/g, 'e')
-                .replace(/imes/g, 'i')
-                .replace(/ai/g, 'a')
-                .replace(/ober/g, 'o')
-                .replace(/ufat/g, 'u');
-        }
 
-        function encriptarTexto() {
-            const inputText = document.getElementById('inputText').value;
-            const outputText = encriptar(inputText);
-            document.getElementById('output').innerText = 'Texto encriptado: ' + outputText;
-        }
+             <section>
+        <p id="outputText"></p>
+        <div><button onclick="copiarTexto()">Copiar</button></div>
+        <p id="mensajeValidacion" style="color: red; display: none;">No se aceptan mayúsculas ni caracteres especiales.</p>
+             </section>
 
-        function desencriptarTexto() {
-            const inputText = document.getElementById('inputText').value;
-            const outputText = desencriptar(inputText);
-            document.getElementById('output').innerText = 'Texto desencriptado: ' + outputText;
-        }
-    </script>
+
+
+
+
+        
+     
+    </main>
+    <footer>
+        Creado por Sebastián Dossow, 2024.
+    </footer>
+    <script src="app_encriptador.js"></script>
 </body>
 </html>
