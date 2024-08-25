@@ -1,5 +1,5 @@
 *{
-    background: #070f28;
+    background: #c3e9e7;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 32px;
@@ -14,72 +14,45 @@
     margin-left: 10px;
     width: 10%;
 }
-main{
+main {
     display: flex;
+    flex-direction: row; /* Asegura que los elementos se alineen en fila */
+    justify-content: space-around; /* Distribuye el espacio alrededor de las secciones */
     margin-bottom: 50px;
     margin-left: 80px;
 }
-/* Contenedor principal */
-
-
-/* 20. Estilizar el color de la página */
-h1 {
-    color: #333;
-    font-size: 2em;
-    margin-bottom: 20px;
+main > section {
+    flex: 1; /* Permite que las secciones ocupen el mismo ancho */
+    margin: 0 10px; /* Añade un pequeño margen horizontal entre secciones */
 }
 
-/* 21. Insertar tipografía */
-textarea {
-    width: 100%;
-    height: 100px;
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    resize: none;
-    margin-bottom: 10px;
-}
 
-/* 22. Colocación de los botones */
-button {
-    padding: 10px 20px;
-    font-size: 1em;
-    margin: 5px;
-    cursor: pointer;
-    background-color: #0066cc;
-    color: white;
+.area_texto{
     border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    color: #0a3871;
+    margin-top: 80px;
+    text-transform: lowercase;
+    
+}
+::placeholder{color: #0a3871;}
+
+.area_texto:focus{
+outline: none;
+}
+.area_encriptado{
+    border: none;
+    color: #0a3871;
+    margin-top: 80px;
+    text-transform: lowercase;
 }
 
-/* 23. Estilizar los botones */
-button:hover {
-    background-color: #005bb5;
-}
 
-/* 24. Estilizar y animar el cursor */
-button:active {
-    background-color: #004d99;
-}
+.informacion
 
-/* 25. Insertar imagen en el campo de presentación */
-#outputText {
-    font-size: 1.2em;
-    color: #444;
-    margin-top: 20px;
-    background: url('muñeco.png') no-repeat center; /* Cambia 'imagen.png' por la URL de la imagen */
-    background-size: contain;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    min-height: 50px;
-}
+.boton_encriptar
 
-/* Estilo del pie de página */
-footer {
-    margin-top: 20px;
-    font-size: 0.8em;
-    color: #666;
-}
+.boton_desencriptar
+
+.boton_copiar
+
+.alerta
