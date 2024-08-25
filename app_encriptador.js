@@ -4,10 +4,10 @@ function encriptar() {
     
     // Validación: solo letras minúsculas sin acentos ni caracteres especiales
     if (!/^[a-z\s]+$/.test(inputText)) {
-        document.getElementById("mensajeValidacion").style.display = "block";
+        document.getElementById("alerta").style.display = "block";
         return;
     } else {
-        document.getElementById("mensajeValidacion").style.display = "none";
+        document.getElementById("alerta").style.display = "none";
     }
 
     // Reglas de encriptación

@@ -1,23 +1,13 @@
 *{
-    background: #f3f5fc;
-    font-family: 'inter';
+    background: #070f28;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 32px;
     line-height: 150%;
 
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: #f0f0f0;
-}
+
 
 .logo {
     padding-top: 10px;
@@ -30,15 +20,7 @@ main{
     margin-left: 80px;
 }
 /* Contenedor principal */
-.container {
-    max-width: 600px;
-    margin: 20px;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
+
 
 /* 20. Estilizar el color de la página */
 h1 {
