@@ -2,75 +2,71 @@ body {
     background-color: #c3e9e7;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    font-size: 32px;
-    line-height: 150%;
-  }
+    font-size: 1.2em; /* Ajusta el tamaño de fuente relativo */
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura un mejor manejo de espacios */
+}
 
 .logo {
     padding-top: 10px;
     margin-left: 10px;
-    width: 10%;
+    width: 100px; /* Un tamaño fijo o ajustable */
+}
+
+header, footer {
+    text-align: center;
+    padding: 10px 0;
 }
 
 main {
     display: flex;
-    flex-direction: row; 
-    justify-content: space-around; 
-    margin-bottom: 50px;
-    margin-left: 80px;
+    flex-direction: column; /* Cambiado a columna para mejor soporte móvil */
+    align-items: center; /* Centra los elementos */
+    margin: 20px;
 }
 
 main > section {
-    flex: 1; 
-    margin: 0 10px; 
+    width: 100%;
+    max-width: 600px; /* Limita el ancho máximo */
+    margin: 20px 0;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Añadido para un mejor encuadre */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #ffffff; /* Fondo blanco para secciones */
 }
 
-.area_texto {
-    width: 100%;
-    height: 200px;
+.area_texto{
+    width: 95%;
+    height: 150px;
     padding: 10px;
     font-size: 1em;
     border: none;
     color: #0a3871;
-    margin-top: 80px;
     background: #ffffff;
     text-transform: lowercase;
     resize: none;
-}
-
-::placeholder {
-    color: #0a3871;
-}
-
-.area_texto:focus {
-    outline: none;
+    border-radius: 5px; /* Añadido para consistencia */
 }
 
 .area_encriptado {
-    width: 60%;
-    height: 268px;
+    width: 95%;
+    height: 150px;
     padding: 10px;
     font-size: 1em;
     border: none;
     color: #0a3871;
-    margin-top: 80px;
+    background-image: url('/imagenes/muñeco.png');
+    background-size: 150px; /* Cambia a un tamaño más pequeño, ajusta según sea necesario */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: bottom right; /* Mueve la imagen a la esquina inferior derecha */
     text-transform: lowercase;
     resize: none;
-    background-color: #ffffff;
-    background-image: url('/imagenes/Muñeco.png');
-    background-repeat: no-repeat;
-    background-size: 150px; 
-    background-position: bottom right; 
-    border-radius: 5px;
-    padding-bottom: 70px; 
-    padding-right: 70px; 
+    border-radius: 5px; /* Añadido para consistencia */
 }
 
-.informacion {
-    font-size: 0.8em;
-    color: #0a3871;
-    margin-top: 10px;
-}
+
 
 .boton_encriptar,
 .boton_desencriptar,
@@ -84,6 +80,7 @@ main > section {
     border: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    width: 100%; /* Botones ocupan todo el ancho disponible */
 }
 
 .boton_encriptar:hover,
@@ -102,10 +99,66 @@ main > section {
     color: red;
     font-size: 0.8em;
     display: none;
+    text-align: center;
 }
 
 footer {
     margin-top: 20px;
     font-size: 0.8em;
     color: #666;
+}
+
+/* Media Queries para Responsividad */
+
+/* Para celulares (pantallas más pequeñas de 600px) */
+@media (max-width: 599px) {
+    main {
+        flex-direction: column; /* Columna para pantallas pequeñas */
+        align-items: center; /* Centra los elementos */
+    }
+
+    main > section {
+        width: 90%; /* Sección ocupa el 90% del ancho */
+        margin: 10px 0; /* Espacio entre secciones */
+    }
+
+    .area_texto, .area_encriptado {
+        height: 150px; /* Altura ajustada para pantallas pequeñas */
+    }
+}
+
+/* Para tablets (pantallas entre 600px y 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+    main {
+        flex-direction: row; /* Fila para tablets */
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+        justify-content: center; /* Centra los elementos */
+    }
+
+    main > section {
+        width: 45%; /* Cada sección ocupa el 45% del ancho */
+        margin: 15px; /* Espacio entre secciones */
+    }
+
+    .area_texto, .area_encriptado {
+        height: 200px; /* Altura ajustada para tablets */
+    }
+}
+
+/* Para escritorios (pantallas mayores de 1024px) */
+@media (min-width: 1025px) {
+    main {
+        flex-direction: row; /* Fila para pantallas grandes */
+        justify-content: center; /* Centra las secciones */
+    }
+
+    main > section {
+        flex: 1;
+        max-width: 45%; /* Limita el ancho máximo de las secciones */
+        margin: 20px;
+    }
+
+    .area_encriptado {
+        height: 268px; /* Tamaño original en pantallas más grandes */
+    }
 }
