@@ -1,11 +1,10 @@
-/* Estilo general */
-* {
-    background: #c3e9e7;
+body {
+    background-color: #c3e9e7;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 32px;
     line-height: 150%;
-}
+  }
 
 .logo {
     padding-top: 10px;
@@ -13,24 +12,22 @@
     width: 10%;
 }
 
-/* Contenedor principal */
 main {
     display: flex;
-    flex-direction: row; /* Asegura que los elementos se alineen en fila */
-    justify-content: space-around; /* Distribuye el espacio alrededor de las secciones */
+    flex-direction: row; 
+    justify-content: space-around; 
     margin-bottom: 50px;
     margin-left: 80px;
 }
 
 main > section {
-    flex: 1; /* Permite que las secciones ocupen el mismo ancho */
-   /* margin: 0 10px;  Añade un pequeño margen horizontal entre secciones */
+    flex: 1; 
+    margin: 0 10px; 
 }
 
-/* Estilo del área de texto */
 .area_texto {
     width: 100%;
-    height: 100px;
+    height: 200px;
     padding: 10px;
     font-size: 1em;
     border: none;
@@ -49,10 +46,9 @@ main > section {
     outline: none;
 }
 
-/* Estilo para el área de texto encriptado */
 .area_encriptado {
     width: 60%;
-    height: 300px;
+    height: 268px;
     padding: 10px;
     font-size: 1em;
     border: none;
@@ -63,21 +59,19 @@ main > section {
     background-color: #ffffff;
     background-image: url('/imagenes/Muñeco.png');
     background-repeat: no-repeat;
-    background-size: 150px; /* Ajusta el tamaño de la imagen a 50px por defecto, puedes cambiarlo según sea necesario */
-    background-position: bottom right; /* Posiciona la imagen en la esquina inferior derecha */
+    background-size: 150px; 
+    background-position: bottom right; 
     border-radius: 5px;
-    padding-bottom: 70px; /* Añade espacio inferior para que el texto no se sobreponga con la imagen */
-    padding-right: 70px; /* Añade espacio derecho para evitar el texto sobre la imagen */
+    padding-bottom: 70px; 
+    padding-right: 70px; 
 }
 
-/* Estilo para la información */
 .informacion {
     font-size: 0.8em;
     color: #0a3871;
     margin-top: 10px;
 }
 
-/* Estilos para los botones */
 .boton_encriptar,
 .boton_desencriptar,
 .boton_copiar {
@@ -92,7 +86,6 @@ main > section {
     transition: background-color 0.3s ease;
 }
 
-/* Estilos hover y active para botones */
 .boton_encriptar:hover,
 .boton_desencriptar:hover,
 .boton_copiar:hover {
@@ -105,14 +98,12 @@ main > section {
     background-color: #004d99;
 }
 
-/* Estilo para la alerta */
 .alerta {
     color: red;
     font-size: 0.8em;
     display: none;
 }
 
-/* Estilo del pie de página */
 footer {
     margin-top: 20px;
     font-size: 0.8em;
