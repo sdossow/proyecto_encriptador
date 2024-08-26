@@ -1,6 +1,7 @@
 // Función para encriptar el texto
 function encriptar() {
-    const inputText = document.getElementById("inputText").value;
+    const inputText = document.getElementById("inputText").value.toLowerCase();
+
     
     // Validación: solo letras minúsculas sin acentos ni caracteres especiales
     if (!/^[a-z\s]+$/.test(inputText)) {
