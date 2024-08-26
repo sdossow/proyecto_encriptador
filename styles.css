@@ -2,17 +2,17 @@ body {
     background-color: #c3e9e7;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    font-size: 1.2em; /* Ajusta el tamaño de fuente relativo */
+    font-size: 1.2em; 
     line-height: 1.5;
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Asegura un mejor manejo de espacios */
+    box-sizing: border-box;
 }
 
 .logo {
     padding-top: 10px;
     margin-left: 10px;
-    width: 100px; /* Un tamaño fijo o ajustable */
+    width: 100px; 
 }
 
 header, footer {
@@ -22,19 +22,19 @@ header, footer {
 
 main {
     display: flex;
-    flex-direction: column; /* Cambiado a columna para mejor soporte móvil */
-    align-items: center; /* Centra los elementos */
+    flex-direction: column;
+    align-items: center; 
     margin: 20px;
 }
 
 main > section {
     width: 100%;
-    max-width: 600px; /* Limita el ancho máximo */
+    max-width: 600px; 
     margin: 20px 0;
     padding: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Añadido para un mejor encuadre */
-    border-radius: 8px; /* Bordes redondeados */
-    background-color: #ffffff; /* Fondo blanco para secciones */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+    border-radius: 8px; 
+    background-color: #ffffff; 
 }
 
 .area_texto{
@@ -47,7 +47,7 @@ main > section {
     background: #ffffff;
     text-transform: lowercase;
     resize: none;
-    border-radius: 5px; /* Añadido para consistencia */
+    border-radius: 5px; 
 }
 
 .area_encriptado {
@@ -57,13 +57,13 @@ main > section {
     font-size: 1em;
     border: none;
     color: #0a3871;
-    background-image: url('/imagenes/muneco.png');
-    background-size: 150px; /* Cambia a un tamaño más pequeño, ajusta según sea necesario */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: bottom right; /* Mueve la imagen a la esquina inferior derecha */
+    background-image: url('./imagenes/muneco.png');
+    background-size: 150px; 
+    background-repeat: no-repeat; 
+    background-position: bottom right; 
     text-transform: lowercase;
     resize: none;
-    border-radius: 5px; /* Añadido para consistencia */
+    border-radius: 5px; 
 }
 
 
@@ -108,57 +108,55 @@ footer {
     color: #666;
 }
 
-/* Media Queries para Responsividad */
 
-/* Para celulares (pantallas más pequeñas de 600px) */
 @media (max-width: 599px) {
     main {
-        flex-direction: column; /* Columna para pantallas pequeñas */
-        align-items: center; /* Centra los elementos */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     main > section {
-        width: 90%; /* Sección ocupa el 90% del ancho */
-        margin: 10px 0; /* Espacio entre secciones */
+        width: 90%; 
+        margin: 10px 0; 
     }
 
     .area_texto, .area_encriptado {
-        height: 150px; /* Altura ajustada para pantallas pequeñas */
+        height: 150px; 
     }
 }
 
-/* Para tablets (pantallas entre 600px y 1024px) */
+
 @media (min-width: 600px) and (max-width: 1024px) {
     main {
-        flex-direction: row; /* Fila para tablets */
-        flex-wrap: wrap; /* Permite que los elementos se envuelvan */
-        justify-content: center; /* Centra los elementos */
+        flex-direction: row; 
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     main > section {
-        width: 45%; /* Cada sección ocupa el 45% del ancho */
-        margin: 15px; /* Espacio entre secciones */
+        width: 45%; 
+        margin: 15px; 
     }
 
     .area_texto, .area_encriptado {
-        height: 200px; /* Altura ajustada para tablets */
+        height: 200px; 
     }
 }
 
-/* Para escritorios (pantallas mayores de 1024px) */
+
 @media (min-width: 1025px) {
     main {
-        flex-direction: row; /* Fila para pantallas grandes */
-        justify-content: center; /* Centra las secciones */
+        flex-direction: row; 
+        justify-content: center; 
     }
 
     main > section {
         flex: 1;
-        max-width: 45%; /* Limita el ancho máximo de las secciones */
+        max-width: 45%; 
         margin: 20px;
     }
 
     .area_encriptado {
-        height: 268px; /* Tamaño original en pantallas más grandes */
+        height: 268px; 
     }
 }
